@@ -1,0 +1,275 @@
+/* --- Global Styles & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: #555555;
+    background-color: #f5f5f5;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: #222222;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: #222222;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #777777;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #111111;
+}
+
+/* --- Blog Header --- */
+.blog-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.blog-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.blog-header p {
+    font-size: 1.2rem;
+    color: #666666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Layouts --- */
+.blog-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 800px) {
+    .blog-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Article Cards --- */
+.post-card {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.post-content {
+    padding: 2.5rem;
+}
+
+.category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #888888;
+    letter-spacing: 1px;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    margin-left: 10px;
+}
+
+.post-content h2 {
+    margin: 0.8rem 0;
+}
+
+.post-content h2 a {
+    text-decoration: none;
+    color: #222222;
+    transition: color 0.3s ease;
+}
+
+.post-content h2 a:hover {
+    color: #777777;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: #333333;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.read-more:hover {
+    border-bottom: 2px solid #333333;
+}
+
+/* --- Modern Hover Animation --- */
+.modern-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* --- Sidebar & Profile Pic --- */
+.sidebar-widget {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #eeeeee;
+}
+
+.sidebar-widget h3 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 0.5rem;
+    color: #333333;
+}
+
+.category-list {
+    list-style: none;
+    text-align: left;
+}
+
+.category-list li {
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dashed #eeeeee;
+    padding-bottom: 0.5rem;
+}
+
+.category-list a {
+    text-decoration: none;
+    color: #555555;
+    transition: color 0.3s;
+}
+
+.category-list a:hover {
+    color: #111111;
+}
+
+/* --- Gallery Section --- */
+.gallery-section {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    padding-bottom: 4rem;
+}
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+}
+
+.gallery-card {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+.img-placeholder {
+    height: 200px;
+    width: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+
+.gallery-info {
+    padding: 1.5rem;
+}
+
+.gallery-info h3 {
+    color: #222222;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: #777777;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #ffffff;
+    color: #888888;
+    border-top: 1px solid #e0e0e0;
+}
