@@ -3,113 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joyonto Biswas Blog</title>
+    <title>Joyonto Biswas - Personal Website</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Joyonto Biswas</div>
+    <nav>
+        <div class="logo">JOYONTO.</div>
         <ul class="nav-links">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#articles">Articles</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#writings">Writings</a></li>
+            <li><a href="#gallery">Family</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header id="home" class="blog-header">
-        <h1>Welcome to My Journal</h1>
-        <p>Sharing thoughts on literature, personal growth, and everyday learnings.</p>
-    </header>
-
-    <div class="container blog-layout">
-        
-        <main id="articles" class="article-feed">
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <span class="subtitle">WELCOME TO MY WORLD</span>
+            <h1>Hi, I’m <span class="highlight">Joyonto Biswas</span></h1>
+            <h2>I am a <span class="highlight">Trader, Learner & Reader.</span></h2>
+            <p>Passionate about Financial Markets, Technology, and Literature. I have strong expertise in Computer Applications and I love exploring the world of Coding and Psychology.</p>
             
-            <article class="post-card modern-hover">
-                <div class="post-content">
-                    <span class="category">Translation</span>
-                    <span class="date">February 21, 2026</span>
-                    <h2><a href="translation-article.html">The Art of Translation: Bringing Ideas to Life</a></h2>
-                    <p>Working on translating profound English texts into Bengali has been an incredible journey. Finding the perfect, easy-to-understand words to capture an author's true meaning requires patience, but the result is deeply rewarding...</p>
-                    <a href="translation-article.html" class="read-more">Read Full Article &rarr;</a>
+            <div class="find-me">
+                <p>CONNECT WITH ME</p>
+                <div class="icon-group">
+                    <a href="#" class="box-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="box-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="box-btn"><i class="fab fa-github"></i></a>
                 </div>
-            </article>
-
-            <article class="post-card modern-hover">
-                <div class="post-content">
-                    <span class="category">Self-Improvement</span>
-                    <span class="date">February 15, 2026</span>
-                    <h2><a href="self-improvement.html">Top Insights from Recent Reads</a></h2>
-                    <p>After diving into dozens of books focused on psychology, business, and self-help, patterns start to emerge. Here are the core principles that have shifted my perspective on daily life and personal growth...</p>
-                    <a href="self-improvement.html" class="read-more">Read Full Article &rarr;</a>
-                </div>
-            </article>
-
-            <article class="post-card modern-hover">
-                <div class="post-content">
-                    <span class="category">Learning</span>
-                    <span class="date">February 10, 2026</span>
-                    <h2><a href="learning.html">Navigating the Nuances of Language</a></h2>
-                    <p>Mastering the rules of English grammar—especially tricky elements like prepositions—can feel like a puzzle. Today, I'm breaking down some simple rules that made a big difference in my own learning process...</p>
-                    <a href="learning.html" class="read-more">Read Full Article &rarr;</a>
-                </div>
-            </article>
-
-        </main>
-
-        <aside class="sidebar">
-            <div class="sidebar-widget about-widget">
-                <img src="picdp.jpg" alt="Joyonto Biswas" class="profile-pic">
-                <h3>Joyonto Biswas</h3>
-                <p>Welcome to my personal blog. I write about the books I read, my translation projects, and the little things I learn every day.</p>
             </div>
-            
-            <div class="sidebar-widget">
-                <h3>Categories</h3>
-                <ul class="category-list">
-                    <li><a href="#">Self-Help & Psychology</a></li>
-                    <li><a href="#">Language & Grammar</a></li>
-                    <li><a href="#">Translation Projects</a></li>
-                    <li><a href="#">Daily Life</a></li>
-                </ul>
-            </div>
-        </aside>
+        </div>
 
-    </div>
-
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <h2 class="gallery-title">Family Photo Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-card modern-hover">
-                    <div class="img-placeholder">Image Space</div>
-                    <div class="gallery-info">
-                        <h3>Winter Vacation</h3>
-                        <p class="meta"><span>📍 Siliguri</span> <span>📅 2025</span></p>
-                    </div>
-                </div>
-                <div class="gallery-card modern-hover">
-                    <div class="img-placeholder">Image Space</div>
-                    <div class="gallery-info">
-                        <h3>Mountain Trip</h3>
-                        <p class="meta"><span>📍 Darjeeling</span> <span>📅 2024</span></p>
-                    </div>
-                </div>
-                <div class="gallery-card modern-hover">
-                    <div class="img-placeholder">Image Space</div>
-                    <div class="gallery-info">
-                        <h3>Festival Celebration</h3>
-                        <p class="meta"><span>📍 Kolkata</span> <span>📅 2023</span></p>
-                    </div>
-                </div>
+        <div class="hero-image">
+            <div class="img-box">
+                <img src="picdp.jpg" alt="Joyonto Biswas Profile">
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Joyonto Biswas. All rights reserved.</p>
+    <section class="skills" id="skills">
+        <div class="section-title">
+            <span class="subtitle">MY EXPERTISE</span>
+            <h2>Technical Skills</h2>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <i class="fas fa-chart-line icon"></i>
+                <h3>Stock Trading</h3>
+                <p>Analyzing market trends, financial charts, and psychology of trading. Passionate about understanding the economy.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-file-word icon"></i>
+                <h3>MS Office Expert</h3>
+                <p>Professional proficiency in MS Word, Excel, and PowerPoint for data management and presentations.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-pen-nib icon"></i>
+                <h3>Photoshop & Design</h3>
+                <p>Creating visual content and editing photos using Adobe Photoshop. I have a keen eye for aesthetics.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-code icon"></i>
+                <h3>Basic Coding</h3>
+                <p>Building websites with HTML, CSS and learning new technologies to establish my digital presence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="writings" id="writings">
+        <div class="section-title">
+            <span class="subtitle">MY BLOG</span>
+            <h2>Latest Writings</h2>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <i class="fas fa-book-open icon"></i>
+                <h3>The Secret Translation</h3>
+                <p>My translation of Rhonda Byrne's 'The Secret'. Exploring the Law of Attraction in Bengali.</p>
+                <a href="#" class="read-more">Read Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-spell-check icon"></i>
+                <h3>English Grammar</h3>
+                <p>Notes on English Grammar rules, focusing on Tenses and Prepositions for easy learning.</p>
+                <a href="#" class="read-more">Start Learning <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-brain icon"></i>
+                <h3>Self Improvement</h3>
+                <p>Psychology and self-growth articles to help build a strong and positive mindset.</p>
+                <a href="#" class="read-more">Read Articles <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="section-title">
+            <span class="subtitle">MEMORIES</span>
+            <h2>Family Gallery</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="fp1.jpg" alt="Family 1"></div>
+            <div class="gallery-item"><img src="fp2.jpg" alt="Family 2"></div>
+            <div class="gallery-item"><img src="fp3.jpg" alt="Family 3"></div>
+            <div class="gallery-item"><img src="fp4.jpg" alt="Family 4"></div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>© 2026 Joyonto Biswas. All rights reserved.</p>
+        <p>Designed with ❤️ in West Bengal</p>
     </footer>
 
 </body>

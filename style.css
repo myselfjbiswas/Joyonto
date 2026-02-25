@@ -1,275 +1,291 @@
-/* --- Global Styles & Reset --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* কালার প্যালেট (Neumorphic Design) */
+:root {
+    --bg-color: #ECF0F3;        /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+    --text-color: #3C3E41;      /* গাঢ় লেখা */
+    --primary-color: #FF014F;   /* অ্যাকসেন্ট কালার (লাল/গোলাপি) */
+    
+    /* 3D শ্যাডো ইফেক্ট */
+    --shadow-light: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
+    --shadow-hover: 2px 2px 5px #d1d9e6, -2px -2px 5px #ffffff;
 }
 
+/* বেসিক সেটআপ */
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
-    color: #555555;
-    background-color: #f5f5f5;
-    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* স্মুথ স্ক্রল */
 }
 
-h1, h2, h3 {
-    font-family: 'Merriweather', serif;
-    color: #222222;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 5%;
-}
-
-/* --- Navigation Bar --- */
-.navbar {
+/* --- নেভিগেশন বার --- */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%;
-    background: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 5%;
     position: sticky;
     top: 0;
+    background: var(--bg-color);
     z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-family: 'Merriweather', serif;
     font-weight: 700;
-    color: #222222;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    letter-spacing: 1px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #777777;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    text-transform: uppercase;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: #111111;
+.nav-links a:hover {
+    color: var(--primary-color);
 }
 
-/* --- Blog Header --- */
-.blog-header {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
+/* --- হিরো সেকশন --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+    min-height: 90vh; /* স্ক্রিন জুড়ে থাকবে */
 }
 
-.blog-header h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.hero-text {
+    flex: 1;
+    padding-right: 50px;
 }
 
-.blog-header p {
+.subtitle {
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.find-me {
+    margin-top: 40px;
+}
+.find-me p {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.icon-group {
+    display: flex;
+    gap: 20px;
+}
+
+/* 3D বাটন (Neumorphism) */
+.box-btn {
+    width: 55px;
+    height: 55px;
+    background: var(--bg-color);
+    box-shadow: var(--shadow-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--text-color);
     font-size: 1.2rem;
-    color: #666666;
-    max-width: 600px;
-    margin: 0 auto;
+    transition: 0.3s ease;
+    text-decoration: none;
 }
 
-/* --- Layouts --- */
-.blog-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    margin-top: 2rem;
+.box-btn:hover {
+    color: var(--primary-color);
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    transform: translateY(-3px);
 }
 
-.gallery-grid {
+/* হিরো ইমেজ ফ্রেম */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-box {
+    width: 380px;
+    height: 500px;
+    background: var(--bg-color);
+    box-shadow: var(--shadow-light);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* --- সাধারণ সেকশন ডিজাইন --- */
+section {
+    padding: 80px 5%;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* --- কার্ড ডিজাইন (Blog Cards) --- */
+.card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 40px;
+    margin-top: 40px;
 }
 
-@media (max-width: 800px) {
-    .blog-layout {
-        grid-template-columns: 1fr;
-    }
+.card {
+    padding: 40px;
+    background: var(--bg-color);
+    box-shadow: var(--shadow-light);
+    border-radius: 15px;
+    transition: 0.4s;
+    text-align: left;
 }
 
-/* --- Article Cards --- */
-.post-card {
-    background: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    margin-bottom: 2rem;
-    overflow: hidden;
+.card:hover {
+    transform: translateY(-10px); /* মাউস নিলে উপরে উঠবে */
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
 }
 
-.post-content {
-    padding: 2.5rem;
+.card .icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
 }
 
-.category {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #888888;
-    letter-spacing: 1px;
-}
-
-.date {
-    font-size: 0.8rem;
-    color: #aaaaaa;
-    margin-left: 10px;
-}
-
-.post-content h2 {
-    margin: 0.8rem 0;
-}
-
-.post-content h2 a {
-    text-decoration: none;
-    color: #222222;
-    transition: color 0.3s ease;
-}
-
-.post-content h2 a:hover {
-    color: #777777;
-}
-
-.post-content p {
-    margin-bottom: 1.5rem;
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 .read-more {
     display: inline-block;
-    color: #333333;
+    margin-top: 20px;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    transition: 0.3s;
 }
 
 .read-more:hover {
-    border-bottom: 2px solid #333333;
+    letter-spacing: 1px;
 }
 
-/* --- Modern Hover Animation --- */
-.modern-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* --- গ্যালারি গ্রিড --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.modern-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+.gallery-item {
+    padding: 15px;
+    background: var(--bg-color);
+    box-shadow: var(--shadow-light);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
 }
 
-/* --- Sidebar & Profile Pic --- */
-.sidebar-widget {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    margin-bottom: 2rem;
-    text-align: center;
+.gallery-item:hover {
+    transform: scale(1.03);
 }
 
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 1rem auto;
-    object-fit: cover;
-    display: block;
-    border: 3px solid #eeeeee;
-}
-
-.sidebar-widget h3 {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #eeeeee;
-    padding-bottom: 0.5rem;
-    color: #333333;
-}
-
-.category-list {
-    list-style: none;
-    text-align: left;
-}
-
-.category-list li {
-    margin-bottom: 0.8rem;
-    border-bottom: 1px dashed #eeeeee;
-    padding-bottom: 0.5rem;
-}
-
-.category-list a {
-    text-decoration: none;
-    color: #555555;
-    transition: color 0.3s;
-}
-
-.category-list a:hover {
-    color: #111111;
-}
-
-/* --- Gallery Section --- */
-.gallery-section {
-    background-color: #ffffff;
-    border-top: 1px solid #e0e0e0;
-    padding-bottom: 4rem;
-}
-
-.gallery-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.2rem;
-}
-
-.gallery-card {
-    background: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    overflow: hidden;
-}
-
-.img-placeholder {
-    height: 200px;
+.gallery-item img {
     width: 100%;
-    background-color: #eeeeee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #aaaaaa;
-    font-size: 0.9rem;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.gallery-info {
-    padding: 1.5rem;
-}
-
-.gallery-info h3 {
-    color: #222222;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.meta {
-    font-size: 0.9rem;
-    color: #777777;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* --- Footer --- */
+/* --- ফুটার --- */
 footer {
     text-align: center;
-    padding: 2rem;
-    background: #ffffff;
-    color: #888888;
-    border-top: 1px solid #e0e0e0;
+    padding: 40px;
+    background: var(--bg-color);
+    color: #666;
+    margin-top: 50px;
+    border-top: 2px solid rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+}
+
+/* --- মোবাইল রেসপন্সিভ --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* ছোট স্ক্রিনে মেনু লুকানো থাকবে */
+    }
+
+    .hero {
+        flex-direction: column-reverse; /* ছবি উপরে, লেখা নিচে */
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-top: 40px;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .img-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .icon-group {
+        justify-content: center;
+    }
 }
